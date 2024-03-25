@@ -2,6 +2,8 @@ FROM python:3.10.2-slim-buster
 #FROM python:3.9.10-slim-buster
 #FROM python:3.9.10-alpine3.15
 
+RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
+
 WORKDIR /code
 
 COPY ./requirements.txt /code/requirements.txt
